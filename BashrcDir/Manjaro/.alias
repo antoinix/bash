@@ -1,0 +1,108 @@
+#                  --Only for manjaro
+
+# ===
+# === Alias (My Necessity! XD)
+# ===
+
+#== Copy
+alias cp="cp -iv"              # confirm before overwriting
+
+#== Directory
+alias s='cd ~/shell'
+alias p='cd ~/python'
+alias sp='cd /usr/lib/python3.8/site-packages'
+alias bf='cd ~/.config/bash/bash-func'
+alias '.c'='cd ~/.config'
+
+#== Git Repos
+alias a='cd ~/awk/tips.awk'            # git repo
+alias b='cd ~/.config/bash'            # git repo
+alias r='cd ~/.config/ranger'          # git repo
+alias t='cd ~/tools'                   # git repo
+alias '.v'='cd ~/.vim'                 # git repo
+alias an='cd ~/python/antopy'          # git repo
+alias pt='cd ~/python/tips-py'         # git repo
+alias ct='cd ~/c/tips.c'               # git repo
+alias st='cd ~/shell/tips-sh'          # git repo
+alias wh='cd ~/whimsy'                 # git repo
+alias cs='cd ~/.config/confiles'       # git repo
+alias re='cd ~/shell/tips.re'          # git repo
+alias te='cd ~/documents/templates'    # git repo
+alias sy='cd ~/documents/symbols-text' # git repo
+
+#== Other Builtins
+alias e='exit'
+alias l='ls -lA'
+alias cl='clear'
+alias fdisk='sudo fdisk'
+alias df='df -h'
+alias free='free -m'
+
+#== Git
+if [ -e /usr/bin/git ]
+then
+    alias ga='git add'
+    alias gaa='git add .'
+    alias gb='git branch'
+    alias gbd='git branch -d'
+    alias gch='git checkout'
+    alias gclone='git clone --depth=1'
+    alias gcm='git commit'
+    alias gd='git diff'
+    alias gf='git fetch origin master'
+    alias gi='git init'
+    alias gm='git merge'
+    alias gmail='git config --global user.email'
+    alias gpull='git pull origin master'
+    alias gpush='git push --set-upstream origin master'
+    alias gr='git reset'
+    alias gremote='git remote add origin'
+    alias grm='git rm --cached'
+    alias gs='git status'
+    alias gstore='git config credential.helper store'
+    alias guser='git config --global user.name'
+fi
+
+#== Pip
+alias pipindou='sudo pip3 install -i https://pypi.doubanio.com/simple'
+alias pipintuna='sudo pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple'
+alias pipinustc='sudo pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple'
+alias pl='pip3 lisy'
+
+#== Vim
+alias v='vim'
+alias vimb='vim ~/.bashrc'
+alias vima='vim ~/.config/bash/BashrcDir/Manjaro/.alias'
+alias vimr='vim ~/.vim/vimrc'
+alias vimrr='cd ~/.vim && vim vimrc'
+alias vimt='vim ~/test/test.sh'
+
+#== Source
+if [ -e ~/.xprofile ]
+then
+    alias sx='source ~/.xprofile'
+fi
+alias sb='source ~/.bashrc'
+
+#== Application & Executable File
+alias ra='ranger'
+alias m='cmatrix'
+alias n='neofetch'
+alias pl='pdflatex'
+alias vs='/opt/VSCode-linux-x64/code &'
+alias wm='python ~/python/applications/wordman/wordman.py'
+alias 858='python ~/python/applications/FDE-858/FDE-858.py'
+alias ebb='python ~/tools/ebbinglish/ebbinglish.py'
+
+#== ssh
+if [ -e /usr/bin/ssh ]
+then
+    alias sstart='systemctl start sshd.service'
+    alias sstop='systemctl stop sshd.service'
+fi
+
+#== cloc
+if [ -e /usr/bin/cloc ]
+then
+    alias c='cloc'
+fi
