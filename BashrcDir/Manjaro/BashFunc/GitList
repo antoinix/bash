@@ -1,0 +1,51 @@
+#! /bin/bash
+
+# ===
+# === Ignored Path List
+# ===
+# Note: Add ignored paths here
+ignored_path_i="/home/antoine/.cache"
+ignored_path_ii="/home/antoine/.local"
+ignored_path_iii="/home/antoine/.vim/plugged"
+ignored_path_iv="/home/antoine/documents"
+ignored_path_v="/home/antoine/Downloads"
+ignored_path_vi="/home/antoine/matlab"
+ignored_path_vii="/home/antoine/media"
+ignored_path_viii="/home/antoine/Texlive"
+ignored_path_ix="/home/antoine/vbox"
+
+
+# ===
+# === Function Defination
+# ===
+# Notice: Keep Updated with The Preceeding List
+GitList()
+{
+for FoundFile in $(find /home/antoine/ \
+    \( -path "$ignored_path_i" \
+    -o -path "$ignored_path_ii" \
+    -o -path "$ignored_path_iii" \
+    -o -path "$ignored_path_iv" \
+    -o -path "$ignored_path_v" \
+    -o -path "$ignored_path_vi" \
+    -o -path "$ignored_path_vii" \
+    -o -path "$ignored_path_viii" \
+    -o -path "$ignored_path_ix" \
+    \) -prune -o -type d -name ".git" -print 2> /dev/null); do
+    if [[ -z $(cd ${FoundFile%/*} && git status | tail -n1) ]]
+    then
+        AbsPath=${FoundFile%/*}
+        printf "\033[40;35m%-17s\033[0m %-48s \033[40;33;5m%-5s\033[0m\n\n" "[${AbsPath##*/}]" $AbsPath "[ ]"
+    else
+        AbsPath=${FoundFile%/*}
+        printf "\033[40;35m%-17s\033[0m %-48s \033[40;34m%-5s\033[0m\n\n" "[${AbsPath##*/}]" $AbsPath "[🌜]"
+    fi
+done
+}
+
+
+# ===
+# === Function Call
+# ===
+echo -e "Loading...\n"
+GitList

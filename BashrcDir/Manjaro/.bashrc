@@ -40,7 +40,7 @@ source "$BASH_IT"/bash_it.sh
 # ===
 # === Program Configuration
 # ===
-#== fzf
+#== fzf config
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='find * --type f | fzf > selected'
 export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --border --preview 'head -100 {}'"
@@ -64,25 +64,19 @@ _fzf_comprun() {
   esac
 }
 
-#== git
-if [ -e /usr/bin/git ]
-then
-    alias gl="cat $BASH_DIR/BashrcDir/Manjaro/.alias | grep '# git repo'"
-fi
-
-#== matlab
+#== matlab path
 if [ -e ~/matlab ]
 then
     export PATH=$PATH:$HOME/matlab/bin
 fi
 
-#== texlive
+#== texlive path
 if [ -e ~/Texlive ]
 then
     export PATH=$PATH:$HOME/Texlive/texlive/2019/bin/x86_64-linux
 fi
 
-#== autojump
+#== autojump path
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 
 
@@ -94,9 +88,3 @@ source $BASH_DIR/BashrcDir/Manjaro/.alias
 
 #== theme build
 source $BASH_DIR/BashrcDir/Manjaro/.build
-
-#== bash functions
-for i in `find $BASH_DIR/bash-func -path "$BASH_DIR/bash-func/Debug" -prune -o -type f -name "*.sh" -print`
-do
-    source $i
-done

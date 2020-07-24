@@ -4,33 +4,16 @@
 # === Alias (My Necessity! XD)
 # ===
 
-#== Copy
-alias cp="cp -iv"              # confirm before overwriting
-
-#== Directory
-alias s='cd ~/shell'
+#== Change Directory Quickly
 alias p='cd ~/python'
-alias sp='cd /usr/lib/python3.8/site-packages'
-alias bf='cd ~/.config/bash/bash-func'
+alias b='cd ~/.config/bash'
+alias r='cd ~/.config/ranger'
+alias pkg='cd /usr/lib/python3.8/site-packages'
+alias '.v'='cd ~/.vim'
 alias '.c'='cd ~/.config'
 
-#== Git Repos
-alias a='cd ~/awk/tips.awk'            # git repo
-alias b='cd ~/.config/bash'            # git repo
-alias r='cd ~/.config/ranger'          # git repo
-alias t='cd ~/tools'                   # git repo
-alias '.v'='cd ~/.vim'                 # git repo
-alias an='cd ~/python/antopy'          # git repo
-alias pt='cd ~/python/tips-py'         # git repo
-alias ct='cd ~/c/tips.c'               # git repo
-alias st='cd ~/shell/tips-sh'          # git repo
-alias wh='cd ~/whimsy'                 # git repo
-alias cs='cd ~/.config/confiles'       # git repo
-alias re='cd ~/shell/tips.re'          # git repo
-alias te='cd ~/documents/templates'    # git repo
-alias sy='cd ~/documents/symbols-text' # git repo
-
-#== Other Builtins
+#== Misc Builtins
+alias cp="cp -iv"              # confirm before overwriting
 alias e='exit'
 alias l='ls -lA'
 alias cl='clear'
@@ -63,7 +46,7 @@ then
     alias guser='git config --global user.name'
 fi
 
-#== Pip
+#== Pip3
 alias pipindou='sudo pip3 install -i https://pypi.doubanio.com/simple'
 alias pipintuna='sudo pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple'
 alias pipinustc='sudo pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple'
@@ -78,31 +61,20 @@ alias vimrr='cd ~/.vim && vim vimrc'
 alias vimt='vim ~/test/test.sh'
 
 #== Source
-if [ -e ~/.xprofile ]
-then
-    alias sx='source ~/.xprofile'
-fi
+alias sx='source ~/.xprofile'
 alias sb='source ~/.bashrc'
 
-#== Application & Executable File
+#== Programs
 alias ra='ranger'
 alias m='cmatrix'
 alias n='neofetch'
 alias pl='pdflatex'
-alias vs='/opt/VSCode-linux-x64/code &'
-alias wm='python ~/python/applications/wordman/wordman.py'
-alias 858='python ~/python/applications/FDE-858/FDE-858.py'
-alias ebb='python ~/tools/ebbinglish/ebbinglish.py'
 
-#== ssh
 if [ -e /usr/bin/ssh ]
 then
     alias sstart='systemctl start sshd.service'
     alias sstop='systemctl stop sshd.service'
 fi
 
-#== cloc
-if [ -e /usr/bin/cloc ]
-then
-    alias c='cloc'
-fi
+#== BashrcFunc
+alias gl="bash $BASH_DIR/BashrcDir/Manjaro/BashFunc/GitList"
