@@ -1,18 +1,15 @@
-#                  --Only for manjaro
+#                  --Only for Centos
 
 # ===
 # === Alias (My Necessity! XD)
 # ===
 
 #== Change Directory Quickly
-alias t='cd ~/test'
-alias p='cd ~/python'
 alias b='cd ~/.config/bash'
 alias r='cd ~/.config/ranger'
-alias pkg='cd /usr/lib/python3.8/site-packages'
-alias c='cd ~/Coding'
 alias '.v'='cd ~/.vim'
 alias '.c'='cd ~/.config'
+alias 'ww'='cd /www'
 
 #== Misc Builtins
 alias cp="cp -iv"              # confirm before overwriting
@@ -57,19 +54,16 @@ alias pl='pip3 lisy'
 #== Vim
 alias v='vim'
 alias vimb='vim ~/.bashrc'
-alias vima='vim ~/.config/bash/BashrcDir/Manjaro/.alias'
+alias vima='vim ~/.config/bash/BashrcDir/Centos/.alias'
 alias vimr='vim ~/.vim/vimrc'
 alias vimrr='cd ~/.vim && vim vimrc'
-alias vimt='vim ~/test/test.sh'
 
 #== Source
-alias sx='source ~/.xprofile'
 alias sb='source ~/.bashrc'
 
 #== Programs
 alias ra='ranger'
 alias n='neofetch'
-alias pl='pdflatex'
 
 if [ -e /usr/bin/ssh ]
 then
@@ -78,5 +72,4 @@ then
 fi
 
 #== BashrcFunc
-alias see="bash $HOME/.config/ranger/see/SeeThem"
-alias nt=ntrack
+alias gl="bash $BASH_DIR/BashrcDir/Centos/BashFunc/GitList"

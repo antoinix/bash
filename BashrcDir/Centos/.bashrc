@@ -1,21 +1,32 @@
-#                    --Only for manjaro
+#                     --Only for Centos
 #                       --$HOME/.bashrc
 #                         --Antoine Lee
-#                 --Mon Feb 10 2020 CST
+#                 --Fri Jul 31 2020 CST
 #    --https://github.com/antoinix/bash
+
+# ===
+# === BASH_DIR path
+# ===
+export BASH_DIR="$HOME/.config/bash"
+
+
+# ===
+# === Default Bash Configuration
+# ===
+source $BASH_DIR/.default
 
 
 # ===
 # === Dress up bash
 # ===
-#== Bash-git
+# === Bash-git
 if [ -f "$HOME/.config/bash/bash-git/gitprompt.sh" ]; then
    GIT_PROMPT_ONLY_IN_REPO=1
    GIT_PROMPT_THEME_NAME='Custom'
    source $HOME/.config/bash/bash-git/gitprompt.sh
 fi
 
-#== Bash-it
+# === Bash-it
 case $- in
   *i*) ;;
     *) return;;
@@ -27,8 +38,9 @@ source "$BASH_IT"/bash_it.sh
 
 
 # ===
-# === Fuzzy Finder (fzf)
+# === Program Configuration
 # ===
+#== fzf config
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='find * --type f | fzf > selected'
 export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --border --preview 'head -100 {}'"
@@ -54,29 +66,10 @@ _fzf_comprun() {
 
 
 # ===
-# === Path & Source
+# === Script Connection
 # ===
-#== BASH_DIR path
-export BASH_DIR="$HOME/.config/bash"
-
-#== Default Bash Configuration
-source $BASH_DIR/.default
-
-#== matlab path
-if [ -e ~/matlab ]; then
-    export PATH=$PATH:$HOME/matlab/bin
-fi
-
-#== texlive path
-if [ -e ~/Texlive ]; then
-    export PATH=$PATH:$HOME/Texlive/texlive/2019/bin/x86_64-linux
-fi
-
 #== bash alias
-source $BASH_DIR/BashrcDir/Manjaro/.alias
+source $BASH_DIR/BashrcDir/Centos/.alias
 
 #== theme build
-source $BASH_DIR/BashrcDir/Manjaro/.build
-
-#== 'see' completion
-source $HOME/.config/ranger/see/Complete
+source $BASH_DIR/BashrcDir/Centos/.build

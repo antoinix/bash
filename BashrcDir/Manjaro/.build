@@ -31,7 +31,7 @@ fi
 # ===
 if [ ! -e $BASH_DIR/bash-git/themes ]
 then
-    mkdir $BASH_DIR/bash-it/themes
+    mkdir $BASH_DIR/bash-git/themes
 fi
 
 if [ ! -L $BASH_DIR/bash-git/themes/Default.bgptheme ]

@@ -7,5 +7,7 @@
 
 - ##### After cloning to local, create a <u>_symbolic link_</u> for .bashrc which is suitable for your Distro from <u>BashrcDir</u> to _<u>$HOME_</u> and source it
 
+- ##### The directory, _<u>BashFunc</u>_, contains some self-created programs
+
 ## EmailMe
 - ##### email: antoinelee.insnow@gmail.com
