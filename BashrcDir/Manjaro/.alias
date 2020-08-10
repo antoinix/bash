@@ -78,5 +78,5 @@ then
 fi
 
 #== BashrcFunc
-alias see="bash $HOME/.config/ranger/see/SeeThem"
+alias see="bash $HOME/.config/ranger/see/see"
 alias nt=ntrack

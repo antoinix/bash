@@ -79,4 +79,4 @@ source $BASH_DIR/BashrcDir/Manjaro/.alias
 source $BASH_DIR/BashrcDir/Manjaro/.build
 
 #== 'see' completion
-source $HOME/.config/ranger/see/Complete
+source $HOME/.config/ranger/see/complete
