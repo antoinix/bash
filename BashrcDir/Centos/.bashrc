@@ -1,32 +1,21 @@
-#                     --Only for Centos
+#                     --Only for centos
 #                       --$HOME/.bashrc
 #                         --Antoine Lee
 #                 --Fri Jul 31 2020 CST
 #    --https://github.com/antoinix/bash
 
-# ===
-# === BASH_DIR path
-# ===
-export BASH_DIR="$HOME/.config/bash"
-
-
-# ===
-# === Default Bash Configuration
-# ===
-source $BASH_DIR/.default
-
 
 # ===
 # === Dress up bash
 # ===
-# === Bash-git
+#== Bash-git
 if [ -f "$HOME/.config/bash/bash-git/gitprompt.sh" ]; then
    GIT_PROMPT_ONLY_IN_REPO=1
    GIT_PROMPT_THEME_NAME='Custom'
    source $HOME/.config/bash/bash-git/gitprompt.sh
 fi
 
-# === Bash-it
+#== Bash-it
 case $- in
   *i*) ;;
     *) return;;
@@ -38,20 +27,18 @@ source "$BASH_IT"/bash_it.sh
 
 
 # ===
-# === Program Configuration
+# === Fuzzy Finder (fzf)
 # ===
-#== fzf config
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_COMMAND='find * --type f | fzf > selected'
-export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --border --preview 'head -100 {}'"
+export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --border --preview 'head -100 {}'"
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_COMPLETION_OPTS='+c -x'
 _fzf_compgen_path() {
-      fd --hidden --follow --exclude ".git" . "$1"
+    fd --hidden --follow --exclude ".git" . "$1"
   }
 
 _fzf_compgen_dir() {
-      fd --type d --hidden --follow --exclude ".git" . "$1"
+    fd --type d --hidden --follow --exclude ".git" . "$1"
   }
 _fzf_comprun() {
   local command=$1
@@ -66,8 +53,14 @@ _fzf_comprun() {
 
 
 # ===
-# === Script Connection
+# === Path & Source
 # ===
+#== BASH_DIR path
+export BASH_DIR="$HOME/.config/bash"
+
+#== Default Bash Config
+source $BASH_DIR/.default
+
 #== bash alias
 source $BASH_DIR/BashrcDir/Centos/.alias
 

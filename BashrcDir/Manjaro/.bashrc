@@ -6,6 +6,14 @@
 
 
 # ===
+# === Timer
+# ===
+init_date=$(date --utc -d $(passwd -S antoine | cut -f3 -d' ') +%s)
+now_date=$(date --utc -d $(date -I) +%s)
+echo "The Manjaro Linux has been installed on this machine for $(($((now_date-init_date))/86400)) days"
+
+
+# ===
 # === Dress up bash
 # ===
 #== Bash-git
@@ -30,8 +38,7 @@ source "$BASH_IT"/bash_it.sh
 # === Fuzzy Finder (fzf)
 # ===
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_COMMAND='find * --type f | fzf > selected'
-export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --border --preview 'head -100 {}'"
+export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --border --preview 'head -100 {}'"
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_COMPLETION_OPTS='+c -x'
 _fzf_compgen_path() {
@@ -67,16 +74,12 @@ if [ -e ~/matlab ]; then
     export PATH=$PATH:$HOME/matlab/bin
 fi
 
-#== texlive path
-if [ -e ~/Texlive ]; then
-    export PATH=$PATH:$HOME/Texlive/texlive/2019/bin/x86_64-linux
-fi
-
 #== bash alias
 source $BASH_DIR/BashrcDir/Manjaro/.alias
 
 #== theme build
 source $BASH_DIR/BashrcDir/Manjaro/.build
 
-#== 'see' completion
+#== completion
 source $HOME/.config/ranger/see/complete
+source $HOME/Coding/Icon/Markdown/complete

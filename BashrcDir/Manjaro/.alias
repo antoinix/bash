@@ -1,82 +1,87 @@
 #                  --Only for manjaro
 
 # ===
-# === Alias (My Necessity! XD)
+# === Built-in
 # ===
-
-#== Change Directory Quickly
-alias t='cd ~/test'
-alias p='cd ~/python'
 alias b='cd ~/.config/bash'
-alias r='cd ~/.config/ranger'
-alias pkg='cd /usr/lib/python3.8/site-packages'
+
 alias c='cd ~/Coding'
+alias cl='clear'
+alias cp="cp -iv"        # confirm before overwriting
+
+alias df='df -h'
+
+alias e='exit'
+
+alias fdisk='sudo fdisk'
+alias free='free -m'
+
+alias l='ls -lA'         # list files(except .. and .) in long foramt
+alias ld='cd ..'         # last directory
+
+alias p='cd ~/python'
+alias pkg='cd /usr/lib/python3.8/site-packages'
+
+alias r='cd ~/.config/ranger'
+
+alias sb='source ~/.bashrc'
+alias sx='source ~/.xprofile'
+
+alias t='cd ~/test'
+
+alias v='vim'
+alias vima='vim ~/.config/bash/BashrcDir/Manjaro/.alias'
+alias vimb='vim ~/.bashrc'
+alias vimr='vim ~/.vim/vimrc'
+alias vimrr='cd ~/.vim && vim vimrc'
+alias vimt='vim ~/test/test.sh'
+
 alias '.v'='cd ~/.vim'
 alias '.c'='cd ~/.config'
 
-#== Misc Builtins
-alias cp="cp -iv"              # confirm before overwriting
-alias e='exit'
-alias l='ls -lA'
-alias cl='clear'
-alias fdisk='sudo fdisk'
-alias df='df -h'
-alias free='free -m'
 
-#== Git
-if [ -e /usr/bin/git ]
-then
-    alias ga='git add'
-    alias gaa='git add .'
-    alias gb='git branch'
-    alias gbd='git branch -d'
-    alias gch='git checkout'
-    alias gclone='git clone --depth=1'
-    alias gcm='git commit'
-    alias gd='git diff'
-    alias gf='git fetch origin master'
-    alias gi='git init'
-    alias gm='git merge'
-    alias gmail='git config --global user.email'
-    alias gpull='git pull origin master'
-    alias gpush='git push --set-upstream origin master'
-    alias gr='git reset'
-    alias gremote='git remote add origin'
-    alias grm='git rm --cached'
-    alias gs='git status'
-    alias gstore='git config credential.helper store'
-    alias guser='git config --global user.name'
-fi
+# ===
+# === Programs
+# ===
+alias ga='git add'
+alias gaa='git add .'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gch='git checkout'
+alias gclone='git clone --depth=1'
+alias gcm='git commit'
+alias gd='git diff'
+alias gf='git fetch origin master'
+alias gi='git init'
+alias gm='git merge'
+alias gmail='git config --global user.email'
+alias gpull='git pull origin master'
+alias gpush='git push --set-upstream origin master'
+alias gr='git reset'
+alias gremote='git remote add origin'
+alias grm='git rm --cached'
+alias gs='git status'
+alias gstore='git config credential.helper store'
+alias guser='git config --global user.name'
 
-#== Pip3
 alias pipindou='sudo pip3 install -i https://pypi.doubanio.com/simple'
 alias pipintuna='sudo pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple'
 alias pipinustc='sudo pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple'
 alias pl='pip3 lisy'
 
-#== Vim
-alias v='vim'
-alias vimb='vim ~/.bashrc'
-alias vima='vim ~/.config/bash/BashrcDir/Manjaro/.alias'
-alias vimr='vim ~/.vim/vimrc'
-alias vimrr='cd ~/.vim && vim vimrc'
-alias vimt='vim ~/test/test.sh'
-
-#== Source
-alias sx='source ~/.xprofile'
-alias sb='source ~/.bashrc'
-
-#== Programs
 alias ra='ranger'
+
 alias n='neofetch'
+
 alias pl='pdflatex'
 
-if [ -e /usr/bin/ssh ]
-then
-    alias sstart='systemctl start sshd.service'
-    alias sstop='systemctl stop sshd.service'
-fi
+alias sstart='systemctl start sshd.service'
+alias sstop='systemctl stop sshd.service'
 
-#== BashrcFunc
+
+# ===
+# === Bash Functions
+# ===
 alias see="bash $HOME/.config/ranger/see/see"
 alias nt=ntrack
+alias icon="bash $HOME/Coding/Icon/Markdown/icon"
