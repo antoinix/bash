@@ -9,7 +9,7 @@ alias c='cd ~/Coding'
 alias cl='clear'
 alias cp="cp -iv"        # confirm before overwriting
 
-alias df='df -h'
+alias d='du -h -d1'
 
 alias e='exit'
 
@@ -17,7 +17,7 @@ alias fdisk='sudo fdisk'
 alias free='free -m'
 
 alias l='ls -lA'         # list files(except .. and .) in long foramt
-alias ld='cd ..'         # last directory
+alias la='cd ..'         # last directory
 
 alias p='cd ~/python'
 alias pkg='cd /usr/lib/python3.8/site-packages'
@@ -67,7 +67,7 @@ alias guser='git config --global user.name'
 alias pipindou='sudo pip3 install -i https://pypi.doubanio.com/simple'
 alias pipintuna='sudo pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple'
 alias pipinustc='sudo pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple'
-alias pl='pip3 lisy'
+alias pl='pip3 list'
 
 alias ra='ranger'
 
@@ -83,5 +83,5 @@ alias sstop='systemctl stop sshd.service'
 # === Bash Functions
 # ===
 alias see="bash $HOME/.config/ranger/see/see"
-alias nt=ntrack
+alias nt="bash $HOME/Coding/ntrack/ntrack"
 alias icon="bash $HOME/Coding/Icon/Markdown/icon"

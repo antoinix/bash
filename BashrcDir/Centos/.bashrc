@@ -8,22 +8,7 @@
 # ===
 # === Dress up bash
 # ===
-#== Bash-git
-if [ -f "$HOME/.config/bash/bash-git/gitprompt.sh" ]; then
-   GIT_PROMPT_ONLY_IN_REPO=1
-   GIT_PROMPT_THEME_NAME='Custom'
-   source $HOME/.config/bash/bash-git/gitprompt.sh
-fi
-
-#== Bash-it
-case $- in
-  *i*) ;;
-    *) return;;
-esac
-export BASH_IT="$HOME/.config/bash/bash-it"
-export BASH_IT_THEME='atomic'
-export TODO="t"
-source "$BASH_IT"/bash_it.sh
+PS1="\[\e[37m\]\342\224\214\342\224\200\342\224\200[\[\e[33m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[37m\]] \342\224\200 [\[\e[34m\]\w\[\e[0m\]]\n\342\224\224\342\224\200\342\224\200[\[\e[36m\]\t\[\e[0m\]] \342\224\200 \[\e[35m\]$\[\e[0m\] "
 
 
 # ===
@@ -59,10 +44,9 @@ _fzf_comprun() {
 export BASH_DIR="$HOME/.config/bash"
 
 #== Default Bash Config
-source $BASH_DIR/.default
+source $BASH_DIR/BashrcDir/Centos/.default
 
 #== bash alias
 source $BASH_DIR/BashrcDir/Centos/.alias
 
-#== theme build
-source $BASH_DIR/BashrcDir/Centos/.build
+export PATH=$PATH:$HOME/you-get

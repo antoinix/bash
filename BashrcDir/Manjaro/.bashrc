@@ -14,7 +14,7 @@ echo "The Manjaro Linux has been installed on this machine for $(($((now_date-in
 
 
 # ===
-# === Dress up bash
+# === Dress bash up
 # ===
 #== Bash-git
 if [ -f "$HOME/.config/bash/bash-git/gitprompt.sh" ]; then
@@ -35,7 +35,7 @@ source "$BASH_IT"/bash_it.sh
 
 
 # ===
-# === Fuzzy Finder (fzf)
+# === fzf
 # ===
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --border --preview 'head -100 {}'"
@@ -46,7 +46,7 @@ _fzf_compgen_path() {
   }
 
 _fzf_compgen_dir() {
-      fd --type d --hidden --follow --exclude ".git" . "$1"
+     fd --type d --hidden --follow --exclude ".git" . "$1"
   }
 _fzf_comprun() {
   local command=$1
@@ -67,7 +67,7 @@ _fzf_comprun() {
 export BASH_DIR="$HOME/.config/bash"
 
 #== Default Bash Configuration
-source $BASH_DIR/.default
+source $BASH_DIR/BashrcDir/Manjaro/.default
 
 #== matlab path
 if [ -e ~/matlab ]; then

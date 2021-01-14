@@ -1,4 +1,4 @@
-#                  --Only for centos
+#                  --Only for ubuntu
 
 # ===
 # === Built-in
@@ -6,7 +6,7 @@
 alias b='cd ~/.config/bash'
 
 alias cl='clear'
-alias cp="cp -iv"              # confirm before overwriting
+alias cp="cp -iv"        # confirm before overwriting
 
 alias d='du -h -d1'
 
@@ -15,27 +15,16 @@ alias e='exit'
 alias fdisk='sudo fdisk'
 alias free='free -m'
 
-alias l='ls -lA'
-alias la='cd ..'
-alias lla='cd .. && cd ..'
-
-alias mb='cd /www/blog'
-alias mbl='cd /www/blog/static/linux'
-alias mbs='cd /www/blog/static/science'
-alias mbt='cd /www/blog/static/todos'
-
-alias n='cd /usr/local/nginx'
-
-alias r='cd ~/.config/ranger'
-alias reload='/usr/local/nginx/sbin/nginx -s reload'
+alias l='ls -lA'         # list files(except .. and .) in long foramt
+alias la='cd ..'         # last directory
 
 alias sb='source ~/.bashrc'
 
 alias v='vim'
+alias vima='vim ~/.config/bash/BashrcDir/Ubuntu/.alias'
 alias vimb='vim ~/.bashrc'
-alias vima='vim ~/.config/bash/BashrcDir/Centos/.alias'
 alias vimr='vim ~/.vim/vimrc'
-alias vimi='vim /www/blog/index.html'
+alias vimrr='cd ~/.vim && vim vimrc'
 
 alias '.v'='cd ~/.vim'
 alias '.c'='cd ~/.config'
@@ -64,11 +53,3 @@ alias grm='git rm --cached'
 alias gs='git status'
 alias gstore='git config credential.helper store'
 alias guser='git config --global user.name'
-
-alias pipindou='sudo pip3 install -i https://pypi.doubanio.com/simple'
-alias pipintuna='sudo pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple'
-alias pipinustc='sudo pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple'
-alias pl='pip3 lisy'
-
-alias sstart='systemctl start sshd.service'
-alias sstop='systemctl stop sshd.service'
